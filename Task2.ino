@@ -1,4 +1,4 @@
-//measure car speed with CarSpeedTest.ino and modify hilighted sections accordingly
+//measure car speed with CarSpeedTest.ino and modify hilighted sections accordingly (would re require a separate calibrator for the stepper/turning angles?
 #include <Stepper.h>
 Stepper stepper(2048, 8, 10, 9, 11);
 int motorpin = 3;
