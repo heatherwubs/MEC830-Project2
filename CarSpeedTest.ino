@@ -1,5 +1,5 @@
 //HOW TO USE THIS PROGRAM
-//1. attach DC motor to pin 3 or modify "motorpin" in line 7 to match your pin
+//1. attach DC motor/servo to pin 3 or modify "motorpin" in line 7 to match your pin
 //2. set up a measuring tape or ruler on the ground and set up the reference point of the car at 0
 //3. run this program
 //4. when the motor stops spinning record the distance the car has travelled.
