@@ -12,6 +12,8 @@ float distance, duration; //variables for distance calculation
 //int x = 0;
 
 void setup() {  
+  pinMode(trigpin, OUTPUT);
+  pinMode(echopin, INPUT);
   Serial.begin(9600);         
   servo1.attach(7);  //servo pin attatchment  
   servo1.write(90);
@@ -53,9 +55,16 @@ void moves(){
   delay(10);//smal delay
   
   servo1.write(0); //go straight
-  delay(1500);//go straight for 1.5 sec
+  delay(3000);//go straight for 1.5 sec
   
+   servo1.write(90);//servo stop
+  stepper.step(680);//change direction to counteract first turn
+  delay(10);//smal delay
+  
+  servo1.write(0); //go straight
+  delay(1500);//go straight for 1.5 sec
   servo1.write(90); //stop servo
-  stepper.step(340); //counteract all angle changes 
+  
+  stepper.step(-340); //counteract all angle changes 
     delay(10);//small delay
     }
